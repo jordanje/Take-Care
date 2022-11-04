@@ -1,0 +1,14 @@
+.intentions-form{
+    width: 40%;
+    display: flexbox;
+    padding: 10px; 
+    border: 1px solid black;
+    text-align: center;
+}
+
+.intentions-form textarea {
+    width: 80%;
+    height: 70px;
+    resize: none;
+
+}

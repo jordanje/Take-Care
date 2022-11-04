@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # resources :themes
+  resources :intentions, only: [:index, :create]
+  # resources :meditation_reflections
+  # resources :meditations
+  resources :users, only: [:show, :create]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 
-  get '/hello', to: 'application#hello_world'
+  #custom routes
+
+  post "/login", to: 'sessions#create'
+  get '/authorized_user', to: 'users#show'
+  delete '/logout', to: 'sessions#destroy'
 end
