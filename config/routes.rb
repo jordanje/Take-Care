@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # resources :themes
   resources :intentions, only: [:index, :create]
   # resources :meditation_reflections
-  # resources :meditations
+  resources :meditations, only: [:create]
   resources :users, only: [:show, :create]
 
 

@@ -31,8 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_162305) do
   end
 
   create_table "meditations", force: :cascade do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.integer "length"
     t.integer "reflection_id"
     t.integer "user_id"
     t.integer "theme_id"

@@ -1,3 +1,3 @@
 class MeditationSerializer < ActiveModel::Serializer
-  attributes :id, :start_time, :end_time, :reflection_id, :user_id, :theme_id
+  attributes :id, :length, :reflection_id, :user_id, :theme_id, :created_at
 end

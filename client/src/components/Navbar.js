@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import Signup from "./Signup";
 
-export default function Navbar({ currentUser, updateUser }) {
+export default function Navbar({ currentUser, updateUser, setMeditations }) {
 
     const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ export default function Navbar({ currentUser, updateUser }) {
         </div>
         :
         <div className="logged-in">
-          <Login updateUser={updateUser}/>
+          <Login updateUser={updateUser} setMeditations={setMeditations}/>
           {/* <Signup /> */}
         </div>
         }

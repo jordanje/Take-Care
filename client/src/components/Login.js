@@ -5,7 +5,7 @@ export default function Login({ updateUser }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [ errorss, setErrors ] = useState(null);
-
+  
     let navigate = useNavigate();  
 
     function handleSubmit(e) {
@@ -24,9 +24,8 @@ export default function Login({ updateUser }) {
         .then((res) => {
           if(res.ok){
             res.json().then(user => {
-              console.log(user)
               updateUser(user)
-               navigate(`/userpage`)
+              navigate(`/userpage`)
             })
           } else {
             res.json().then(json => setErrors(json.errors))
