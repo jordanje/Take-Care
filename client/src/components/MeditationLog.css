@@ -1,0 +1,64 @@
+.meditation-log{
+    text-align: center;
+}
+
+.meditation-btn-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+}
+
+.stats h3 {
+    width: 280px;
+}
+
+.this-week {
+    display: flexbox;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 10px;
+    padding-right: 20px;
+}
+
+.this-week span{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.last-week {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+    justify-content: right;
+    margin-left: 10px;
+}
+
+.last-week span{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.longest-meditation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 10px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.longest-meditation span {
+    font-size: 26px;
+    font-weight: 600;
+}

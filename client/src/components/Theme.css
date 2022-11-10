@@ -1,0 +1,35 @@
+.themes {
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 10px;
+    transition: all 0.5s;
+} 
+
+.theme-name{
+    width: 150px;
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    padding: none;
+
+}
+
+.theme-name h4 {
+    margin-top: 17px;
+}
+
+.theme-background {
+    width: 150px;
+    background-color: blue;
+    border-radius: 0px 28px 28px 0px;
+}
+
+.themes:hover {
+    font-size: 20px;
+}

@@ -5,7 +5,6 @@ class CreateMeditationReflections < ActiveRecord::Migration[7.0]
       t.string :question_2
       t.string :question_3
       t.string :question_4
-      t.integer :meditation_id
 
       t.timestamps
     end

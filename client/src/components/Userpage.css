@@ -1,0 +1,15 @@
+.user-page {
+    display: flex
+}
+
+.meditation-section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding-left: 20px;
+}

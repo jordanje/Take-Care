@@ -1,0 +1,40 @@
+.navbar {
+    overflow: hidden;
+    font-family: 'Nunito', sans-serif;
+    border-bottom: 0.5px solid black;
+    height: 60px;
+}
+
+.navbar .logo{
+    float: left;
+    width: 150px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    margin: 15px;
+    margin-bottom: 0px;
+}
+
+.logged-out{
+    float: right;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: right;
+    font-size: 15px;
+    margin: 10px;
+
+}
+
+.logout {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 5px;
+    width: 80px;
+    border-radius: 5%;
+}
+.logout:hover{
+    color:gray
+}

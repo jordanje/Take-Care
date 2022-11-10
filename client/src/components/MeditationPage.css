@@ -1,0 +1,11 @@
+.meditation-page{
+    height: 900px;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.meditation-page p {
+    margin-block-end:  none;
+}

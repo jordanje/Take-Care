@@ -25,14 +25,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_162305) do
     t.string "question_2"
     t.string "question_3"
     t.string "question_4"
-    t.integer "meditation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "meditations", force: :cascade do |t|
     t.integer "length"
-    t.integer "reflection_id"
+    t.integer "meditation_reflection_id"
     t.integer "user_id"
     t.integer "theme_id"
     t.datetime "created_at", null: false

@@ -3,11 +3,11 @@ import ControlButtons from "./ControlButtons";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function StopWatch({currentUser}){
+export default function StopWatch({currentUser, onShowReflection, selectedTheme, updateMeditations}){
     const [isActive, setIsActive] = useState(false);
     const [isPaused, setIsPaused] = useState(true);
     const [time, setTime] = useState(0);
-    let navigate = useNavigate();
+ 
 
     useEffect(() => {
         let interval = null;
@@ -42,21 +42,25 @@ export default function StopWatch({currentUser}){
 
         const meditation_data = {
             user_id: currentUser.id,
-            length: time
+            length: time,
+            meditation_reflection_id: null,
+            theme_name: selectedTheme.name
         }
         setIsActive(false);
         setTime(0);
 
-        console.log(meditation_data)
         fetch('/meditations', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "application/json" 
             },
             body: JSON.stringify(meditation_data)
-        }).then(res => res.json())
-        .then(data => console.log(data))
+        }).then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          onShowReflection(data)
+          updateMeditations(data)
+        })
       }
 
     return (

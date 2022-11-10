@@ -1,5 +1,5 @@
 class MeditationReflection < ApplicationRecord
 
-    belongs_to :meditation
-    belongs_to :user, through: :meditation
+    has_one :meditation
+    has_one :user, through: :meditation
 end

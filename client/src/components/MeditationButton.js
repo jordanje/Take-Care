@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom"
+import './MeditationButton.css'
 
 export default function MeditationButton(){
     let navigate = useNavigate();
 
     function handleMeditationClick(){
-        navigate('/meditation')
+        navigate('/themes')
     }
 
     return (
         <div>
-            <button onClick={handleMeditationClick}>Meditate Now</button>
+            <button className="meditate-now" onClick={handleMeditationClick}>Meditate Now</button>
         </div>
     )
 }

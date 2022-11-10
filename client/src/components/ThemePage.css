@@ -1,0 +1,11 @@
+.theme-page {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.theme-page h3 {
+    font-size: 28px;
+}
