@@ -10,7 +10,7 @@ export default function MeditationButton(){
 
     return (
         <div>
-            <button className="meditate-now" onClick={handleMeditationClick}>Meditate Now</button>
+            <button className="meditate-now" onClick={handleMeditationClick}>START MEDITATION</button>
         </div>
     )
 }

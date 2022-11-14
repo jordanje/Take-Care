@@ -1,0 +1,52 @@
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    z-index: 10;
+
+    /* display: flex;
+    flex-direction: row; */
+ 
+}
+
+.page-toggler{
+    align-items: center;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border-top: 0.125rem solid rgb(234, 231, 228);
+    height: calc(3.875rem);
+}
+
+.toggler-btns{
+    margin: 0px auto;
+    max-width: 30.25rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.btn-unclicked{
+    font-size: 15px;
+    height: 100%;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    cursor: pointer;
+}
+
+.btn-clicked {
+    font-size: 15px;
+    height: 100%;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    cursor: pointer;
+    border-top: 0.125rem solid rgb(255, 126, 29);
+}

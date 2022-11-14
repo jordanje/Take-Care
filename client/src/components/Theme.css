@@ -2,17 +2,18 @@
     height: 60px;
     font-size: 18px;
     text-align: center;
-    width: 300px;
+    width: 350px;
     display: flex;
     border: 2px solid black;
     cursor: pointer;
     border-radius: 30px;
     margin: 10px;
     transition: all 0.5s;
+    color: rgb(58, 58, 58);
 } 
 
 .theme-name{
-    width: 150px;
+    width: 175px;
     /* display: flex; */
     text-align: center;
     justify-content: center;
@@ -25,11 +26,13 @@
 }
 
 .theme-background {
-    width: 150px;
+    width: 175px;
     background-color: blue;
     border-radius: 0px 28px 28px 0px;
+    opacity: 0.85;
 }
 
 .themes:hover {
-    font-size: 20px;
+    zoom: 105%;
+    transition: 0.5s;
 }

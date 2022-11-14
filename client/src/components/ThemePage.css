@@ -7,5 +7,12 @@
 }
 
 .theme-page h3 {
-    font-size: 28px;
+    font-size: 32px;
 }
+
+
+@media screen and (max-width: 700px) {
+    .theme-page h3{
+        margin-top: 80px;
+    }
+  }

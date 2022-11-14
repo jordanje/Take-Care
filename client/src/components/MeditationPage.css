@@ -1,11 +1,39 @@
 .meditation-page{
-    height: 900px;
-    width: 100%;
-    color: white;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.meditation-background img{
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 0%;
 }
 
-.meditation-page p {
-    margin-block-end:  none;
+.meditation-background {
+    align-self: center;
+    margin: auto;
 }
+
+.meditation-page h2 {
+    margin-block-end:  none;
+    padding: 10px;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.audio {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .meditation-page img{
+        width: 140%;
+    }
+}
+

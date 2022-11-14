@@ -1,16 +1,25 @@
 .meditation-log{
     text-align: center;
+    font-size: 22px;
 }
 
+.meditation-log h3 {
+    margin-bottom: 0px;
+    font-size: 26px;
+}
+
+
 .meditation-btn-container{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .stats {
     display: flex;
     flex-wrap: wrap;
-    width: 280px;
+    text-align: center;
+    justify-content: center;
+
 }
 
 .stats h3 {
@@ -18,47 +27,84 @@
 }
 
 .this-week {
-    display: flexbox;
     text-align: center;
-    font-size: 12px;
-    margin-left: 10px;
-    padding-right: 20px;
+    font-size: 16px;
+    padding: 20px;
 }
 
 .this-week span{
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 0px;
+
+}
+
+.longest {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.longest span{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+
+.meditation-items {
+    background-color: transparent;
+    border-bottom: 1px solid #36558f;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    min-width: 500px;
+    padding: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.meditation-items:hover{
+    background-color: rgba(211, 211, 211, 0.474);
+}
+
+.meditation-items .med-date{
+
+} 
+
+.meditation-items .view-more {
+    font-size: 30px;
     padding: 0px;
+    margin: 0px;
 }
 
-.last-week {
-    display: flex;
-    flex-wrap: wrap;
+.meditation-logs {
+    display: grid;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 12px;
-    justify-content: right;
-    margin-left: 10px;
+    margin: auto;
+    padding: 20px;
 }
 
-.last-week span{
-    font-size: 26px;
-    font-weight: 600;
+
+
+@media screen and (max-width: 700px) {
+    .meditation-log{
+    /* max-width: 350px; */
+    padding: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 100%;
+    }
+
+    .meditation-items{
+        width: 100%;
+        min-width: 100%;
+        padding: 0px;
+    }
 }
 
-.longest-meditation {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    font-size: 12px;
-    margin-left: 10px;
-    padding-right: 20px;
-    margin-top: 10px;
-}
-
-.longest-meditation span {
-    font-size: 26px;
-    font-weight: 600;
-}

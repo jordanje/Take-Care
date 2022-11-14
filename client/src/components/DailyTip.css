@@ -1,0 +1,21 @@
+.daily-tip-container {
+    max-width: 400px;
+    /* background-color: #f8f4e5;  */
+    background-color: #f8f4e5;
+    border: 1px solid #36558f;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.daily-tip-container h3{
+    font-size: 22px;
+    margin: none;
+    padding: none;
+}
+
+.daily-tip-container p {
+    margin: none;
+    padding: none;
+    font-size: 18px;
+}

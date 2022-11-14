@@ -3,6 +3,14 @@
   /* font-family: 'Nunito', sans-serif; */
 }
 
+.App{
+  display: flex;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  min-height: min-content;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

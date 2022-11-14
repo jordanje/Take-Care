@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import "./Intentions.css"
+import PageToggler from "./PageToggler"
 
 export default function Intentions({currentUser}) {
     const [ intentionData, setIntentionData ] = useState({ question_1: "", question_2: "", question_3: ""})
@@ -89,13 +90,13 @@ export default function Intentions({currentUser}) {
                 <textarea name="question_3" value={intentionData.question_3} onChange={handleChange}/>
               
                 {lookBack?  
-                <div>
+                <div className="form-btns">
                     <button className="look-back" type="button" onClick={handleBack}>LOOK BACK</button> 
                     <button type="button" className="new" onClick={handleNewForm}>NEW</button> 
                 </div>
               
                 :
-                <div>
+                <div className="form-btns">
                     <button className="look-back" type="button" onClick={handleBack}>LOOK BACK</button> 
                     <input className="submit" type="submit" value="SAVE"/>
                 </div>
@@ -114,6 +115,7 @@ export default function Intentions({currentUser}) {
                     </div>
                 ))}
             </div> */}
+
         </div>
     )
 }

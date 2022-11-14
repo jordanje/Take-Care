@@ -1,15 +1,71 @@
 .user-page {
-    display: flex
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    justify-content: center;
+    text-align: center;
+    color: rgb(75, 76, 77);
+}
+
+.daily-tip-div {
+    padding: 20px;
+}
+
+.user-page .greeting {
+    font-size: 22px;
+    margin-top: 10px;
+    padding-left: 60px;
+    align-self: flex-start;
+    font-weight: 500;
 }
 
 .meditation-section {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    width: 500px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    padding-left: 20px;
+    margin-bottom: 50px;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
 }
+
+.meditation-btn-container {
+    text-align: center;
+    max-width: 450px;
+}
+
+.intentions-page {
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .user-page {
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .meditation-section {
+        align-items: center;
+        /* position: relative; */
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .meditation-btn-container{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .stats {
+        margin: 10px;
+    }
+
+
+  }

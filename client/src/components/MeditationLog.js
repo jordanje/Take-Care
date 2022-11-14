@@ -29,19 +29,15 @@ export default function MeditationLog({currentUser, meditations}) {
                         <span>{getTotalMinutes} min</span>
                         <p>Total time this week</p>
                     </div>
-                    <div className="last-week">
-                        <span>{totalLastMinutes} min</span>
-                        <p>Total time last week</p>
-                    </div>
-                    <div className="longest-meditation">
+                    <div className="longest">
                         <span>{longestMinutes} min</span>
                         <p>Longest meditation</p>
                     </div>
+            
                 </div>
-                <div className="meditation-btn-container">
-                    <MeditationButton />
-                </div>
+          
                 <h3>Recent Activity</h3>
+                <div className="meditation-logs">
                 {meditations.slice(0,5).map((med, index) => {
                   
                     const getSeconds = `0${(med.length % 60)}`.slice(-2)
@@ -50,15 +46,16 @@ export default function MeditationLog({currentUser, meditations}) {
                     const getHours = `0${Math.floor(med.length / 3600)}`.slice(-2)
                   
                     return (
-                <div key={med.id}>
-                    <img />
-                    <p>{med.created_at}</p>
-                    <p>Duration: {getHours}:{getMinutes}:{getSeconds}</p>
+                <div className="meditation-items" key={med.id}>
+                    <p className='med-date'>{med.created_at}</p>
+                    {/* <p>Duration: {getHours}:{getMinutes}:{getSeconds}</p> */}
+                    <p className="view-more">›</p>
                   
                     {/* <ReflectionLog key={med.id} id={med.meditation_reflection.id}/>   */}
                 </div>
                 )}
                 )}
+                </div>
             </div>
         )
                 }

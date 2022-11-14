@@ -1,71 +1,17 @@
 import Timer from "./Timer";
 import ControlButtons from "./ControlButtons";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import './StopWatch.css'
 
-export default function StopWatch({currentUser, onShowReflection, selectedTheme, updateMeditations}){
-    const [isActive, setIsActive] = useState(false);
-    const [isPaused, setIsPaused] = useState(true);
-    const [time, setTime] = useState(0);
- 
-
-    useEffect(() => {
-        let interval = null;
-      
-        if (isActive && isPaused === false) {
-          interval = setInterval(() => {
-            setTime((time) => time + 1);
-          }, 1000);
-        } else {
-          clearInterval(interval);
-        }
-        return () => {
-          clearInterval(interval);
-        };
-      }, [isActive, isPaused]);
-
-      const handleStart = () => {
-        setIsActive(true);
-        setIsPaused(false);
-      };
-      
-      const handlePauseResume = () => {
-        setIsPaused(!isPaused);
-      };
-      
-      const handleReset = () => {
-        setIsActive(false);
-        setTime(0);
-      };
-
-      const handleEnd = () => {
-
-        const meditation_data = {
-            user_id: currentUser.id,
-            length: time,
-            meditation_reflection_id: null,
-            theme_name: selectedTheme.name
-        }
-        setIsActive(false);
-        setTime(0);
-
-        fetch('/meditations', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(meditation_data)
-        }).then((res) => res.json())
-        .then((data) => {
-          console.log(data)
-          onShowReflection(data)
-          updateMeditations(data)
-        })
-      }
+export default function StopWatch({isActive, time, isPaused, handleEnd, handlePauseResume, handleReset, handleStart}){
+  
 
     return (
-        <div>
+        <div className="stop-watch-container">
+          <div className="timer">
             <Timer time={time}/>
+          </div>
+          <div className="control-btns">
             <ControlButtons 
                    active={isActive}
                    isPaused={isPaused}
@@ -74,6 +20,7 @@ export default function StopWatch({currentUser, onShowReflection, selectedTheme,
                    handleReset={handleReset}
                    handleEnd={handleEnd}
             />
+          </div>
         </div>
     )
 }

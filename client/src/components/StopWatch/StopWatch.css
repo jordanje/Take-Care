@@ -1,0 +1,32 @@
+.stop-watch-container {
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.stop-watch-container .timer{
+    margin-top: 10px;
+    font-size: 36px;
+}
+
+.btn-grp-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.btn-two {
+    padding: 10px;
+    font-size: 22px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn-start {
+    padding: 10px;
+    font-size: 22px;
+    background-color: white;
+    cursor: pointer;
+}

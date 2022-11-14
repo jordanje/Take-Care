@@ -1,22 +1,25 @@
+import './StopWatch.css'
+
+
 export default function ControlButtons(props){
     const StartButton = (
-        <div className="btn btn-one btn-start"
+        <div className="btn-start"
              onClick={props.handleStart}>
-          Start
+          Begin
         </div>
       );
       const ActiveButtons = (
-        <div className="btn-grp">
-          <div className="btn btn-two" 
+        <div className="btn-grp-2">
+          <div className="btn-two" 
                onClick={props.handleReset}>
             Reset
           </div>
-          <div className="btn btn-one" 
+          <div className="btn-two" 
                onClick={props.handlePauseResume}>
             {props.isPaused ? "Resume" : "Pause"}
           </div>
-          <div className="btn" onClick={props.handleEnd}>
-            End
+          <div className="btn-two" onClick={props.handleEnd}>
+            Finish
           </div>
         </div>
       );

@@ -1,20 +1,23 @@
 .meditate-now {
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 30px;
-    width: 220px;
-    background-color:#ed8e83;
-    border: 1px solid #ed8e83;
-    font-size: 17px;
+    min-width: 320px; 
+    /* background-color:#ed8e83; */
+    background-color: #36558f;
+    border: 1px solid #36558f;
+    font-size: 26px;
     cursor: pointer;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     transition: all 0.5s;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    color: rgb(255, 255, 255);
 }
 
 .meditate-now:hover {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    background-color: #ed8e83;
-    font-size: 21px;
+    background-color: #36558fdb;
+    border-color: #36558fdb;
+    font-size: 28px;
     transition: 0.5s;
 }

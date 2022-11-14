@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import './MeditationReflection.css'
 
 export default function MeditationReflection({newMeditation, updateMeditations}) {
     const [ reflectionData, setReflectionData ] = useState({meditation_id: newMeditation.id, question_1:"", question_2:"", question_3:"", question_4:""});
@@ -29,9 +30,9 @@ export default function MeditationReflection({newMeditation, updateMeditations})
     }
 
     return (
-        <div>
+        <div className='reflection-form-div'>
             <form className="reflection-form" onSubmit={handleSubmit}>
-                <h2>Daily Intentions</h2>
+                <h2>Meditation Reflection</h2>
                 <label>Question 1</label>
                 <textarea name="question_1" value={reflectionData.question_1} onChange={handleChange}/>
                 <label>Question 2</label>
@@ -40,7 +41,7 @@ export default function MeditationReflection({newMeditation, updateMeditations})
                 <textarea name="question_3" value={reflectionData.question_3} onChange={handleChange}/>
                 <label>Question 4</label>
                 <textarea name="question_4" value={reflectionData.question_4} onChange={handleChange}/>
-                <input type="submit" value="submit"/>
+                <input type="submit" value="SAVE"/>
             </form>
         </div>
     )
