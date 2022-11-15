@@ -113,6 +113,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
+    pg (1.4.4)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -150,8 +151,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     spring (4.1.0)
-    sqlite3 (1.5.3-arm64-darwin)
-    sqlite3 (1.5.3-x86_64-linux)
     thor (1.2.1)
     timeout (0.3.0)
     tzinfo (2.0.5)
@@ -171,10 +170,10 @@ DEPENDENCIES
   bootsnap
   byebug
   listen (~> 3.3)
+  pg
   puma (~> 5.0)
   rails (~> 7.0.4)
   spring
-  sqlite3 (~> 1.4)
   tzinfo-data
 
 RUBY VERSION
