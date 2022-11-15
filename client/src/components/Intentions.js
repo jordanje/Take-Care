@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import "./Intentions.css"
 import PageToggler from "./PageToggler"
+import Clouds from '../2.png'
 
 export default function Intentions({currentUser}) {
     const [ intentionData, setIntentionData ] = useState({ question_1: "", question_2: "", question_3: ""})
@@ -76,18 +77,36 @@ export default function Intentions({currentUser}) {
 
     return (
         <div className="intentions">
-            <div className="form-layer">
-            
-            </div>
+          
             <form className="intentions-form" onSubmit={handleSubmit}>
                 <h2>Daily Intentions</h2>
+                {/* <div className="clouds-div">
+                <img className="clou
+                                <p>{date}</p>ds-img" src={Clouds}/>
+                </div> */}
                 <p>{date}</p>
-                <label>Question 1</label>
-                <textarea name="question_1" value={intentionData.question_1} onChange={handleChange}/>
-                <label>Question 2</label>
-                <textarea name="question_2"value={intentionData.question_2} onChange={handleChange}/>
-                <label>Question 3</label>
-                <textarea name="question_3" value={intentionData.question_3} onChange={handleChange}/>
+                <div className="more-info">For more info on <a href="https://discoverbrillia.com/blogs/articles/how-setting-daily-intentions-can-reduce-stress" target='_blank'>benefits and tips!</a></div>
+
+              
+    
+                <textarea 
+                name="question_1" 
+                value={intentionData.question_1} 
+                onChange={handleChange}
+                placeholder ="What am I most excited about in my life today?"
+                />
+                <textarea 
+                name="question_2"
+                value={intentionData.question_2} 
+                onChange={handleChange}
+                placeholder ="What are the 3 things I'm grateful for today?"
+                />
+                <textarea 
+                name="question_3" 
+                value={intentionData.question_3} 
+                onChange={handleChange}
+                placeholder ="What can I do in order to make my goals easier?"
+                />
               
                 {lookBack?  
                 <div className="form-btns">

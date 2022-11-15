@@ -31,16 +31,15 @@ export default function MeditationReflection({newMeditation, updateMeditations})
 
     return (
         <div className='reflection-form-div'>
+                  <div className="background-intentions">
+                </div>
             <form className="reflection-form" onSubmit={handleSubmit}>
                 <h2>Meditation Reflection</h2>
-                <label>Question 1</label>
-                <textarea name="question_1" value={reflectionData.question_1} onChange={handleChange}/>
-                <label>Question 2</label>
-                <textarea name="question_2"value={reflectionData.question_2} onChange={handleChange}/>
-                <label>Question 3</label>
-                <textarea name="question_3" value={reflectionData.question_3} onChange={handleChange}/>
-                <label>Question 4</label>
-                <textarea name="question_4" value={reflectionData.question_4} onChange={handleChange}/>
+                <p>A time to reflect on your meditation</p>
+                <textarea name="question_1" value={reflectionData.question_1} onChange={handleChange} placeholder="What am I experiencing right now in this very moment?"/>
+                <textarea name="question_2"value={reflectionData.question_2} onChange={handleChange} placeholder="What helps me release tension and let go of distracting thoughts?"/>
+                <textarea name="question_3" value={reflectionData.question_3} onChange={handleChange} placeholder="What am I often aware of during mindfulness meditation?"/>
+                <textarea name="question_4" value={reflectionData.question_4} onChange={handleChange} placeholder="What thoughts and emotions come to the surface most often? "/>
                 <input type="submit" value="SAVE"/>
             </form>
         </div>

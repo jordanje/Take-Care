@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login({ updateUser }) {
-    const [username, setUsername] = useState("");
+export default function Login({ updateUser, handleShowSignup }) {
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [ errorss, setErrors ] = useState(null);
   
@@ -11,7 +11,7 @@ export default function Login({ updateUser }) {
     function handleSubmit(e) {
       e.preventDefault();
       const user = {
-        username,
+        email,
         password
       };
       fetch("/login", {
@@ -35,20 +35,34 @@ export default function Login({ updateUser }) {
 
   
     return (
-      <form onSubmit={handleSubmit}>
+      <div className="login-form-div">
+        
+      <form  className="login-form" onSubmit={handleSubmit}>
+      <div className="login-header">
+          <h2>Log In</h2>
+          <div className="login-info">
+            <p>New to Take Care? </p>
+            <span onClick={handleShowSignup}> Sign up for free!</span>
+          </div>
+        </div>
         <input
           type="text"
-          name="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          name="email"
+          placeholder="Email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input 
-            type="text" 
+            type="password" 
             name="password"
+            placeholder="Password"
+            required
             value={password}  
             onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button className="login-btn" type="submit">Log In</button>
       </form>
+      </div>
     );
   }

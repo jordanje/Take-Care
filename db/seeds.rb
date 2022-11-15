@@ -1,5 +1,5 @@
-user1 = User.create(username: "jsjennings", password: "12341234", email: "jordanjennings12@gmail.com", firstname: "Jordan", lastname: "Jennings")
-user2 = User.create(username: "toulouse", password: "12341234", email: "tootoo@gmail.com", firstname: "toulouse", lastname: "perederiy")
+user1 = User.create(password: "12341234", email: "jordanjennings12@gmail.com", firstname: "Jordan", lastname: "Jennings")
+user2 = User.create(password: "12341234", email: "tootoo@gmail.com", firstname: "toulouse", lastname: "perederiy")
 
 reflection1 = MeditationReflection.create(question_1: "Great", question_2: "Wonderful", question_3: "Yay", question_4: "the best")
 reflection2 = MeditationReflection.create(question_1: "Great", question_2: "Wonderful", question_3: "Yay", question_4: "the best")

@@ -34,6 +34,7 @@
 @media screen and (max-width: 800px) {
     .meditation-page img{
         width: 140%;
+        margin-top: 30%;
     }
 }
 

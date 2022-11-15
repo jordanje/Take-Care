@@ -1,50 +1,65 @@
 
 .intentions-form{
     font-family: 'Nunito', sans-serif;
-    max-width: 450px;
-    height: 600px;
-    padding: 10px; 
-    background-color: #f8f4e5;
+    max-width: 600px;
+    /* height: 600px; */
+    padding: 10px 10px; 
+    /* background-color: #f8f4e5; */
     text-align: center;
     align-content: center;
-    position: relative;
-    z-index: 2;
-    border: 2px solid black;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    /* border: 2px solid black; */
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
     margin: auto;
-    top: -600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    position:relative;
 }
 
-.form-layer {
-    width: 450px;
-    height: 600px;
-    padding: 10px; 
-    /* background-color: #95a4ff; */
-    background-color: #36558f;
-    position: relative;
-    /* top:-480px; 
-    left:35px;  */
-    z-index: 1; 
-    border: 2px solid black;
-    margin: auto;
-    left: -20px;
-}
 
 .intentions-form h2{
-    font-size: 30px;
+    font-size: 38px;
+    font-weight: 800;
+    margin: 5px;
+    z-index: 3;
 }
-/* .intentions {
-    display: overlay;
-} */
+
+.intentions-form p {
+    z-index: 3;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+.clouds-img {
+    display: flex;
+    width: 370px;
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+}
+
+.clouds-div{
+    top: 60px;
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+}
 
 .intentions-form textarea {
-    width: 85%;
-    height: 15%;
+    width: 80%;
+    height: 70px;
+    padding: 20px;
     resize: none;
-    margin: 5px;
-    border: 1.5px solid #000000;
-    background-color:#f8f4e5;
-    /* border-radius: 8px; */
+    margin: 20px;
+    border: 1.5px solid #b2afaf;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.intentions-form label {
+    font-size: 18px;
 }
 
 .intentions-form textarea:focus {
@@ -60,9 +75,10 @@
 .new {
     /* background-color: #95a4ff; */
     background-color: #36558f;
-    border: 1.5px solid black;
+    border: none;
+    border-radius: 30px;
     padding: 10px 0px;
-    width: 130px;
+    width: 170px;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -80,8 +96,9 @@
 .submit {
     /* background-color: #95a4ff; */
     background-color: #36558f;
-    border: 1.5px solid black;
-    width: 120px;
+    border: none;
+    border-radius: 30px;
+    width: 170px;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -99,8 +116,10 @@
 .look-back {
     /* background-color: #95a4ff; */
     background-color: #36558f;
-    border: 1.5px solid black;
-    width: 130px;
+    border: none;
+    border-radius: 30px;
+    width: 170px;
+
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -122,9 +141,29 @@
     transition: 0.5s;
 }
 
+.more-info{
+    z-index: 3;
+    color: rgb(121, 121, 121);
+    margin: 10px;
+}
+
+.more-info a {
+    color: #ff7e1d;
+    text-decoration: none;
+}
+
+
 
 
 
 @media screen and (max-width: 700px) {
+    .intentions-form {
+        width: 100%;
+        padding: 0px;
+    }
 
-  }
+    .clouds-img {
+        top: 50px;
+        width: 280px;
+    }
+}

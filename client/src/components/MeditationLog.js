@@ -3,11 +3,16 @@ import ReflectionLog from "./ReflectionLog";
 import UserPage from "./UserPage";
 import './MeditationLog.css'
 import MeditationButton from "./MeditationButton";
+import { useNavigate } from "react-router-dom";
 
 export default function MeditationLog({currentUser, meditations}) {
     // const [ viewReflection, setViewReflection ] = useState(false)
     // const handleViewReflection = () => setViewReflection(true)
+    let navigate = useNavigate();
 
+    const handleMeditationClick = (id) => {
+        navigate(`/meditation/${id}`)
+    }
 
     if(currentUser){
         const totalMinutes = `${Math.floor(currentUser.total_time_this_week / 60)}`
@@ -46,7 +51,7 @@ export default function MeditationLog({currentUser, meditations}) {
                     const getHours = `0${Math.floor(med.length / 3600)}`.slice(-2)
                   
                     return (
-                <div className="meditation-items" key={med.id}>
+                <div className="meditation-items" key={med.id} onClick={() => handleMeditationClick(med.id)}>
                     <p className='med-date'>{med.created_at}</p>
                     {/* <p>Duration: {getHours}:{getMinutes}:{getSeconds}</p> */}
                     <p className="view-more">›</p>

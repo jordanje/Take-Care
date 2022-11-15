@@ -10,14 +10,15 @@ import Home from "./components/Home";
 import UserPage from './components/UserPage';
 import ThemePage from "./components/ThemePage";
 import MeditationPage from "./components/MeditationPage";
-import MeditationReflection from "./components/MeditationReflection";
 import Intentions from "./components/Intentions";
+import MeditationItemPage from "./components/MeditationItemPage";
 import NightSky from './NightSky.mp3'
 import FirePlace from './Fireplace.mp3'
 import OceanWaves from './OceanWaves.mp3'
 import Stream from './Stream.mp3'
 import Thunderstorm from './Thunderstorm.mp3'
 import Rainforest from './Rainforest.mp3'
+import loginPhoto from './loginphoto.svg'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(false);
@@ -58,7 +59,7 @@ function App() {
           setMeditations(data)
       })
   
-  }, []);
+  }, [setMeditations]);
 
   const updateUser = (user) => setCurrentUser(user)
   const updateTheme = (theme) => {
@@ -78,7 +79,8 @@ function App() {
             <Route path="/daily-intention" element={<Intentions currentUser={currentUser}/>}/>
             <Route path="/themes" element={<ThemePage currentUser={currentUser} themes={themes} updateTheme={updateTheme}/>} />
             <Route path="/meditation" element={<MeditationPage currentUser={currentUser} selectedTheme={selectedTheme} updateMeditations={updateMeditations}/>} />
-            <Route path="/meditation-reflection" element={<MeditationReflection currentUser={currentUser} />} />
+            <Route path='/meditation/:id' element={<MeditationItemPage />} />
+            <Route path='/login-photo' element={loginPhoto} />
         </Routes>
     </div>
   )

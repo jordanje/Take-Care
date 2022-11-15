@@ -1,11 +1,11 @@
 .meditate-now {
-    padding: 10px 20px;
+    padding: 13px 26px;
     border-radius: 30px;
-    min-width: 320px; 
+    min-width: 330px; 
     /* background-color:#ed8e83; */
     background-color: #36558f;
     border: 1px solid #36558f;
-    font-size: 26px;
+    font-size: 22px;
     cursor: pointer;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
@@ -18,6 +18,6 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     background-color: #36558fdb;
     border-color: #36558fdb;
-    font-size: 28px;
+    font-size: 24px;
     transition: 0.5s;
 }

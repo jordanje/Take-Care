@@ -15,6 +15,8 @@ export default function UserPage ({currentUser, meditations}) {
         <div>
             {switchPage? 
             <div className="intentions-page">
+                  <div className="background-intentions">
+                </div>
                 <Intentions />
             </div>: 
             <div className="user-page">

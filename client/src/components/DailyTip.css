@@ -9,13 +9,27 @@
 }
 
 .daily-tip-container h3{
-    font-size: 22px;
+    font-size: 24px;
     margin: none;
     padding: none;
+    z-index: 1;
 }
 
 .daily-tip-container p {
-    margin: none;
-    padding: none;
+    margin: 0px;
+    padding: 15px 5px;
     font-size: 18px;
+    z-index: 1;
+}
+
+.mindfulness-gif {
+    max-width: 120px;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+.daily-tip-container .header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
 }

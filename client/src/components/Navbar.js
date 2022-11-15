@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import Signup from "./Signup";
 import './Navbar.css'
-import logo from '../TakeCareLogo.png';
+import logo from '../TakeCareLogo.svg';
 
 export default function Navbar({ currentUser, updateUser, setMeditations }) {
 
@@ -29,15 +29,11 @@ export default function Navbar({ currentUser, updateUser, setMeditations }) {
           {/* <button className="intentions-btn">INTENTIONS</button>
           <button className="meditate-btn">MEDITATE</button> */}
           <p>Hi, {currentUser.firstname}!</p>
-          <button className="logout" onClick={handleLogout}>logout</button>
+          <div className="logout" onClick={handleLogout}>Log out</div>
     
         </div>
         :
-        <div className="logged-in">
-          <Login updateUser={updateUser} setMeditations={setMeditations}/>
-          <Signup />
-          {/* <Signup /> */}
-        </div>
+        <p  className='slogan' >A Mindfulness App for Meditation and Intentions</p>
         }
       </div>
       

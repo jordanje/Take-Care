@@ -1,0 +1,136 @@
+.login-signup-div {
+    margin-top: 40px;
+}
+
+.login-form-div, .signup-form-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.login-header h2, .signup-form h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.login-info, .register-info{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.login-info p, .register-info p{
+    padding: 0px 5px;
+}
+
+.login-info span, .register-info span {
+    color: #ffa600;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 550px;
+    align-items: center;
+    margin: auto;
+    padding: 10px 30px;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    padding: 30px 30px;
+    position: relative;
+    border-radius: 30px;
+}
+
+.login-form input {
+    width: 90%;
+    padding: 18px 16px 18px;
+    border-radius: 10px;
+    border: 1px solid rgb(189, 189, 189);
+    font-size: 18px;
+    margin: 20px
+}
+
+.login-form input:focus {
+    border: none;
+    outline: 1px solid black;
+    
+}
+
+.login-form input::placeholder{
+    color: black;
+}
+
+.login-btn, .signup-btn{
+    width: 96%;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px;
+    border-radius: 30px;
+    border: 1px solid #36558f;;
+    background-color: #36558f;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.login-btn:hover {
+    border: 1px solid #2d4f8d;
+    background-color: #284a87;
+}
+
+
+.signup-form input{
+    width: 90%;
+    padding: 18px 16px 18px;
+    border-radius: 10px;
+    border: 1px solid rgb(189, 189, 189);
+    font-size: 18px;
+    margin: 10px
+}
+
+.signup-form input:focus {
+    border: none;
+    outline: 1px solid black;
+
+}
+
+.signup-form input::placeholder{
+    color: black;
+}
+
+.signup-form .name {
+    width: 100%;
+    display: flex;
+}
+
+.background-circles {
+    background-position: center bottom;
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../loginphoto.svg');
+    /* background-size: 1200px ; */
+}
+
+
+@media screen and (max-width: 800px) {
+    .login-form, .signup-form {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .background-circles {
+        background-size: 800px;
+    }
+}

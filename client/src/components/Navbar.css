@@ -12,20 +12,26 @@
     position: relative;
     bottom: 0px;
     left: 0px;
-    padding: 5px;
+    padding: 5px 20px;
     /* border-bottom: 0.125rem solid rgb(234, 231, 228); */
 }
 
 .navbar .logo{
     width: 25%;
-    max-width: 200px;
-    padding: 10px;
+    max-width: 230px;
+    cursor: pointer;
 }
 
+.slogan {
+    font-size:16px;
+    letter-spacing:1.5px;
+    padding:5px 20px;
+}
 .logged-out{
 
     display: flex;
-    font-size: 16px;
+    font-size: 18px;
+    color: black;
     /* align-items: center; */
     /* justify-content: right; */
     /* justify-self: flex-end; */
@@ -33,7 +39,6 @@
 
 .logged-out p {
     padding: 10px;
-    font-weight: 600;
 }
 
 .logout {
@@ -41,10 +46,9 @@
     border: none;
     cursor: pointer;
     border-radius: 5%;
-    font-size: 16px;
+    font-size: 18px;
     margin: auto;
-    padding: 5px;
-    width: 80px;
+    padding: 10px;
 }
 
 .logout:hover{
@@ -59,21 +63,32 @@
 @media screen and (max-width: 800px) {
     .navbar {
       width: 100%; 
-      padding: 10px;
+      /* padding: 10px; */
       /* min-width: 380px */
+      margin: 0px;
+      padding: 0px;
     }
 
     .navbar .logo {
-        width: 35%;
+        width: 40%;
         padding: 0px;
     }
 
     .logout {
-        padding: none;
+        font-size: 16px;
+        padding: 10px;
     }
 
     .logged-out p {
         padding: 0px;
+        font-size: 16px;
+    }
+
+    .slogan {
+        visibility: hidden;
+        padding: 0px;
+        margin: 0px;
+
     }
 
   }

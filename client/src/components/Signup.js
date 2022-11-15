@@ -1,12 +1,11 @@
 import { useState } from "react"
-export default function Signup () {
+
+export default function Signup ({handleShowLogin}) {
     const [ formData, setFormData ] = useState({
-        username: "",
         email: "",
         firstname: "",
         lastname: "",
         password: "",
-        password_confirmation: ""
     })
 
     function handleFormChange(event) {
@@ -25,43 +24,63 @@ export default function Signup () {
             body: JSON.stringify(formData)
         })
         .then(res => res.json())
-        .then(user => console.log(user))
+        .then(user => {
+            setFormData({
+                email: "",
+                firstname: "",
+                lastname: "",
+                password: "",
+            })
+        })
+
+        handleShowLogin()
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="username"
-                    value={formData.username}
-                    onChange={handleFormChange}
-                />
+        <div className="signup-form-div">
+            <form className="signup-form" onSubmit={handleSubmit}>
+                <div className='signup-form-header'>
+                    <h2>Register</h2>
+                    <div className='register-info'>
+                        <p>Already have an account?</p>
+                        <span onClick={handleShowLogin}>Log in</span>
+                    </div>
+                </div>
+                <div className="name">
+                    <input 
+                        type="text" 
+                        name="firstname"
+                        placeholder="First name"
+                        required
+                        value={formData.firstname}  
+                        onChange={handleFormChange}
+                    />
+                    <input 
+                        type="text" 
+                        name="lastname"
+                        placeholder="Last name"
+                        required
+                        value={formData.lastname}  
+                        onChange={handleFormChange}
+                    />
+                </div>
                 <input 
                     type="text" 
                     name="email"
+                    placeholder="Email"
+                    required
                     value={formData.email}  
-                    onChange={handleFormChange}
-                />
-                <input 
-                    type="text" 
-                    name="firstname"
-                    value={formData.firstname}  
-                    onChange={handleFormChange}
-                />
-                <input 
-                    type="text" 
-                    name="lastname"
-                    value={formData.lastname}  
                     onChange={handleFormChange}
                 />
                 <input 
                     type="password" 
                     name="password"
+                    placeholder="Password"
+                    required
                     value={formData.password}  
                     onChange={handleFormChange}
                 />
-                <button type="submit">Sign up</button>
+                <button className='signup-btn' type="submit">Sign up</button>
             </form>
         </div>
     )

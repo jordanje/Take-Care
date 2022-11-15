@@ -1,0 +1,107 @@
+.meditation-item-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.meditation-item-page .total-minutes{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: baseline;
+}
+
+.date {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 22px;
+}
+
+.meditation-item-page .total-minutes h3{
+    padding: 5px;
+    font-size: 62px;
+    margin: 0px;
+}
+
+.meditation-item-page .total-minutes span {
+    font-size: 24px
+}
+
+.duration {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.duration p {
+    margin: 0px;
+    font-size: 18px;
+}
+
+.meditation-reflection-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.questions {
+    margin: 2px;
+    font-size: 20px;
+    color: rgb(125, 125, 125);
+}
+
+.responses {
+    font-size: 22px;
+    color: black;
+}
+
+.circle-image {
+    width: 260px;
+    border-radius: 20px;
+}
+
+.clock {
+    width: 30px;
+}
+
+.item-header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.date-duration {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    padding: 10px 10px;
+}
+
+.clock-duration{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .meditation-item-page{
+        width: 100%;
+    }
+
+    .circle-image {
+        width: 100%;
+    }
+
+    .date-duration {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-header {
+        margin: 0px;
+    }
+
+}
