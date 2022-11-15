@@ -30,7 +30,7 @@ export default function MeditationLog({currentUser, meditations}) {
         const totalLastMinutes = `${Math.floor(currentUser.total_time_last_week / 60)}`
         const getTotalLastMinutes = `${totalLastMinutes % 60}`.slice(-2)
 
-        const longestMinutes = `${Math.floor(currentUser.longest / 60)}`
+        const longestMinutes = `${Math.floor(currentUser.longest.time / 60)}`
         const getLongestMinutes = `${longestMinutes % 60}`.slice(-2)
     
   

@@ -14,8 +14,8 @@ theme1 = Theme.create(name: "Stary Night", background: "https://images.unsplash.
 theme2 = Theme.create(name: "Beach Day", background: "https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80", audio: "haha")
 theme3 = Theme.create(name: "Cozy fire", background: "https://images.unsplash.com/photo-1585743792825-228b00d1f2b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80", audio: "haha")
 
-meditation1 = Meditation.create(length: 456, user: user1, meditation_reflection: reflection1, theme: theme1)
-meditation2 = Meditation.create(length: 129, user: user1, meditation_reflection: reflection2, theme: theme2)
-meditation3 = Meditation.create(length: 345, user: user1, meditation_reflection: reflection2, theme: theme2)
-meditation4 = Meditation.create(length: 345, user: user2, meditation_reflection: reflection4, theme: theme3)
-meditation5 = Meditation.create(length: 378, user: user2, meditation_reflection: reflection3, theme: theme2)
+meditation1 = Meditation.create(time: 456, user: user1, meditation_reflection: reflection1, theme: theme1)
+meditation2 = Meditation.create(time: 129, user: user1, meditation_reflection: reflection2, theme: theme2)
+meditation3 = Meditation.create(time: 345, user: user1, meditation_reflection: reflection2, theme: theme2)
+meditation4 = Meditation.create(time: 345, user: user2, meditation_reflection: reflection4, theme: theme3)
+meditation5 = Meditation.create(time: 378, user: user2, meditation_reflection: reflection3, theme: theme2)

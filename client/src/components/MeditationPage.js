@@ -53,7 +53,7 @@ export default function MeditationPage({currentUser, selectedTheme, updateMedita
 
         const meditation_data = {
             user_id: currentUser.id,
-            length: time,
+            time: time,
             meditation_reflection_id: null,
             theme_name: selectedTheme.name
         }

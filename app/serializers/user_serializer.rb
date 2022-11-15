@@ -12,7 +12,7 @@ class UserSerializer < ActiveModel::Serializer
 
     sum = 0
     rec.each do |m|
-      sum += m.length
+      sum += m.time
     end
     return sum
   end
@@ -28,14 +28,14 @@ class UserSerializer < ActiveModel::Serializer
 
     sum = 0
     rec.each do |m|
-      sum += m.length
+      sum += m.time
     end
     return sum
 
   end
 
   def longest
-    object.meditations.max{|a,b| a.length<=>b.length}
+    object.meditations.max{|a,b| a.time<=>b.time}
   end
 
 end

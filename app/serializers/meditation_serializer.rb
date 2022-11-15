@@ -1,5 +1,5 @@
 class MeditationSerializer < ActiveModel::Serializer
-  attributes :id, :length, :user_id, :created_at, :meditation_reflection, :theme
+  attributes :id, :time, :user_id, :created_at, :meditation_reflection, :theme
 
   has_one :meditation_reflection
   has_one :theme
