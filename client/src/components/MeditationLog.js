@@ -15,6 +15,17 @@ export default function MeditationLog({currentUser, meditations}) {
         navigate(`/meditation/${id}`)
     }
 
+   
+    const totalMinutes = `${Math.floor(currentUser.total_time_this_week / 60)}`
+    const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
+
+
+    const totalLastMinutes = `${Math.floor(currentUser.total_time_last_week / 60)}`
+    const getTotalLastMinutes = `${totalLastMinutes % 60}`.slice(-2)
+
+    // const longestMinutes = `${Math.floor(currentUser.longest.time / 60)}`
+    // const getLongestMinutes = `${longestMinutes % 60}`.slice(-2)
+
 
 
         // useEffect(() => {
@@ -22,16 +33,7 @@ export default function MeditationLog({currentUser, meditations}) {
         //     .then(data => data.json())
         //     .then(data => console.log(data))
         // })
-    
-        const totalMinutes = `${Math.floor(currentUser.total_time_this_week / 60)}`
-        const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
 
-
-        const totalLastMinutes = `${Math.floor(currentUser.total_time_last_week / 60)}`
-        const getTotalLastMinutes = `${totalLastMinutes % 60}`.slice(-2)
-
-        const longestMinutes = `${Math.floor(currentUser.longest.time / 60)}`
-        const getLongestMinutes = `${longestMinutes % 60}`.slice(-2)
     
   
         return (
@@ -42,11 +44,11 @@ export default function MeditationLog({currentUser, meditations}) {
                         <span>{getTotalMinutes} min</span>
                         <p>Total time this week</p>
                     </div>
-                    <div className="longest">
+                    {/* <div className="longest">
                         <span>{longestMinutes} min</span>
                         <p>Longest meditation</p>
                     </div>
-            
+             */}
                 </div>
           
                 <h3>Recent Activity</h3>
@@ -71,6 +73,6 @@ export default function MeditationLog({currentUser, meditations}) {
                 </div>
             </div>
         )
-                
+                           
 } 
 

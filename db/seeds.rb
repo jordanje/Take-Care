@@ -8,7 +8,7 @@ reflection4 = MeditationReflection.create(question_1: "Great", question_2: "Wond
 
 intention1 = Intention.create(question_1: "Happiness", question_2: "Joy", question_3: "work", user: user1)
 
-intention2 = Intention.create(question_1: "Peace", question_2: "Joy", question_3: "work", user: user1)
+intention2 = Intention.create(question_1: "Peace", question_2: "Joy", question_3: "work", user: user2)
 
 theme1 = Theme.create(name: "Stary Night", background: "https://images.unsplash.com/photo-1532721344391-eaf75d3ab37f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80", audio: "haha")
 theme2 = Theme.create(name: "Beach Day", background: "https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80", audio: "haha")
@@ -19,3 +19,4 @@ meditation2 = Meditation.create(time: 129, user: user1, meditation_reflection: r
 meditation3 = Meditation.create(time: 345, user: user1, meditation_reflection: reflection2, theme: theme2)
 meditation4 = Meditation.create(time: 345, user: user2, meditation_reflection: reflection4, theme: theme3)
 meditation5 = Meditation.create(time: 378, user: user2, meditation_reflection: reflection3, theme: theme2)
+

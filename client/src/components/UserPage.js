@@ -10,7 +10,7 @@ export default function UserPage ({currentUser, meditations}) {
     const [switchPage, setSwitchPage] = useState(false);
     
     
- 
+
     return (
         <div>
             {switchPage? 
@@ -40,5 +40,6 @@ export default function UserPage ({currentUser, meditations}) {
             </div>
         </div>  
     )
+        
    
 }
