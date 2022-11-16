@@ -45,6 +45,7 @@ function App() {
   const updateDuration = (newTime) => setDuration(parseInt(newTime) + parseInt(duration))
 
   useEffect(() => {
+   
     fetch('/authorized_user')
     .then(res => {
       if(res.ok){
@@ -54,6 +55,7 @@ function App() {
           const totalMinutes = `${Math.floor(user.total_time_this_week / 60)}`
           const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
           setDuration(totalMinutes)
+          setMeditations(user.meditations)
         })
       }
     })
@@ -70,24 +72,25 @@ function App() {
       fetch('/meditations')
       .then(data => data.json())
       .then(data => {
-          setMeditations(data)
+        let recentFive = data.slice(0,5)
+          setMeditations(recentFive)
       })
   
-  }, [setMeditations]);
+  }, [setCurrentUser]);
 
 
   return (
     <div>
-      <Navbar updateUser={updateUser} currentUser={currentUser}/>
+      <Navbar updateUser={updateUser} currentUser={currentUser} setMeditations={setMeditations}/>
         <Routes>
-            <Route path="/" element={<Home updateUser={updateUser} />} />
+            <Route path="/" element={<Home updateUser={updateUser} setMeditations={setMeditations} setDuration={setDuration}/>} />
             {/* <Route path="/login" element={<Login updateUser={updateUser}/>} /> */}
             <Route path="/userpage" element={<UserPage duration={duration} currentUser={currentUser} meditations={meditations}/>} />
             <Route path="/daily-intention" element={<Intentions currentUser={currentUser}/>}/>
             <Route path="/themes" element={<ThemePage currentUser={currentUser} themes={themes} updateTheme={updateTheme}/>} />
             <Route path="/meditation" element={<MeditationPage updateDuration={updateDuration} duration={duration} currentUser={currentUser} selectedTheme={selectedTheme} updateMeditations={updateMeditations}/>} />
             <Route path='/meditation/:id' element={<MeditationItemPage />} />
-            <Route path='/login-photo' element={loginPhoto} />
+      
         </Routes>
     </div>
   )

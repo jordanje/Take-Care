@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login({ updateUser, handleShowSignup }) {
+export default function Login({ updateUser, handleShowSignup, setMeditations, setDuration}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [ errorss, setErrors ] = useState(null);
@@ -25,12 +25,23 @@ export default function Login({ updateUser, handleShowSignup }) {
           if(res.ok){
             res.json().then(user => {
               updateUser(user)
+              const totalMinutes = `${Math.floor(user.total_time_this_week / 60)}`
+              const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
+              setDuration(totalMinutes)
+             
+              fetch('/meditations')
+              .then(data => data.json())
+              .then(data => {
+                let recentFive = data.slice(0,5)
+                  setMeditations(recentFive)
+              })
               navigate(`/userpage`)
             })
           } else {
             res.json().then(json => setErrors(json.errors))
           }
         })
+
     }
 
   

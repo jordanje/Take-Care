@@ -4,7 +4,7 @@ import Signup from "./Signup";
 import './Home.css';
 
 
-export default function Home({updateUser, setMeditations}) {
+export default function Home({updateUser, setMeditations, setDuration}) {
     const [showLogin, setShowLogin] = useState(true)
     const [showSignup, setShowSignup ] = useState(false)
 
@@ -26,6 +26,7 @@ export default function Home({updateUser, setMeditations}) {
                 handleShowSignup={handleShowSignup} 
                 updateUser={updateUser} 
                 setMeditations={setMeditations}
+                setDuration={setDuration}
                 />}
                 {showSignup&& <Signup handleShowLogin={handleShowLogin}/> }
             </div>

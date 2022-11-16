@@ -29,20 +29,7 @@ export default function Intentions({currentUser}) {
     let index = intentions.length - counter
         // for(let i = 0; i < ind; i++){
             //     console.log(i, index)
-            // }
-
-    function handleBack(event){
-        console.log(counter)
-        let prevIntentions = intentions[index]
-        setIntentionData({
-            question_1: prevIntentions.question_1,
-            question_2: prevIntentions.question_2,
-            question_3: prevIntentions.question_3,
-        })
-        setDate(prevIntentions.created_at)
-        setLookBack(true)
-        setCounter(counter + 1)
-    }
+            // 
 
 
     function handleNewForm(event){
@@ -57,6 +44,7 @@ export default function Intentions({currentUser}) {
     }
 
    function handleSubmit(event){
+        event.preventDefault();
 
         const intentionsData = {
             user_id: currentUser.id,
@@ -71,24 +59,38 @@ export default function Intentions({currentUser}) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(intentionsData)
-        }).then((res) => res.json())
-        .then((data) => console.log(data))
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            setIntentionData({ question_1: "", question_2: "", question_3: ""})
+            setIntentions([...intentions, data])
+    
+            index = intentions.length - counter
+        })
    } 
+
+
+   function handleBack(event){
+    let prevIntentions = intentions[index]
+    setIntentionData({
+        question_1: prevIntentions.question_1,
+        question_2: prevIntentions.question_2,
+        question_3: prevIntentions.question_3,
+    })
+    setDate(prevIntentions.created_at)
+    setLookBack(true)
+    setCounter(counter + 1)
+}
 
     return (
         <div className="intentions">
           
             <form className="intentions-form" onSubmit={handleSubmit}>
                 <h2>Daily Intentions</h2>
-                {/* <div className="clouds-div">
-                <img className="clou
-                                <p>{date}</p>ds-img" src={Clouds}/>
-                </div> */}
                 <p>{date}</p>
-                <div className="more-info">For more info on <a href="https://discoverbrillia.com/blogs/articles/how-setting-daily-intentions-can-reduce-stress" target='_blank'>benefits and tips!</a></div>
-
-              
-    
+                <div className="more-info">For more info on 
+                    <a href=" https://discoverbrillia.com/blogs/articles/how-setting-daily-intentions-can-reduce-stress" target='_blank'> benefits and tips!</a>
+                </div>
                 <textarea 
                 name="question_1" 
                 value={intentionData.question_1} 

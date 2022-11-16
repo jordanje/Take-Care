@@ -41,7 +41,7 @@ export default function MeditationLog({currentUser, meditations, duration}) {
           
                 <h3>Recent Activity</h3>
                 <div className="meditation-logs">
-                {meditations.slice(0,5).map((med, index) => {
+                {meditations.map((med, index) => {
                   
                     const getSeconds = `0${(med.length % 60)}`.slice(-2)
                     const minutes = `${Math.floor(med.length / 60)}`

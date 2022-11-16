@@ -13,6 +13,7 @@ export default function Navbar({ currentUser, updateUser, setMeditations }) {
         method: "DELETE",
       }).then(() => {
         updateUser(false)
+        setMeditations([])
         navigate('/')
       });
     }

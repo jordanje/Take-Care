@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import './MeditationItemPage.css'
 import circles from '../circles.png'
 import clock from '../clock.png'
-import MeditationReflection from "./MeditationReflection"
+import goBack from '../goback.svg'
+
 
 
 export default function MeditationItemPage(){
@@ -18,6 +19,9 @@ export default function MeditationItemPage(){
 
     const totalMinutes = `${Math.floor(meditation.length / 60)}`
     const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
+
+    const navigate = useNavigate();
+    
 
     useEffect(() => {
         fetch(`/meditations/${id}`)
@@ -41,9 +45,13 @@ export default function MeditationItemPage(){
         <div className="meditation-item-page">
            
             <div className="item-header">
-            <div className="date">
-                    {meditation.created_at} 
+                <div className="date">
+                    <div className="go-back-div" onClick={() => navigate('/userpage')}>
+                        <img src={goBack} alt="go back" />
+                    </div>
+                    <p>{meditation.created_at} </p>
                 </div>
+             
                 <div className="date-duration">
                 <img src={circles} className="circle-image"/>
                 <div className="duration">

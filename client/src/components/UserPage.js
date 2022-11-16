@@ -8,6 +8,7 @@ import PageToggler from "./PageToggler";
 
 export default function UserPage ({currentUser, meditations, duration}) {
     const [switchPage, setSwitchPage] = useState(false);
+  
     
     
  
@@ -17,7 +18,7 @@ export default function UserPage ({currentUser, meditations, duration}) {
             <div className="intentions-page">
                   <div className="background-intentions">
                 </div>
-                <Intentions />
+                <Intentions currentUser={currentUser}/>
             </div>: 
             <div className="user-page">
             <div className="greeting">
