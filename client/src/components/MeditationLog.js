@@ -30,8 +30,8 @@ export default function MeditationLog({currentUser, meditations}) {
         const totalLastMinutes = `${Math.floor(currentUser.total_time_last_week / 60)}`
         const getTotalLastMinutes = `${totalLastMinutes % 60}`.slice(-2)
 
-        // const longestMinutes = `${Math.floor(currentUser.longest.time / 60)}`
-        // const getLongestMinutes = `${longestMinutes % 60}`.slice(-2)
+        const longestMinutes = `${Math.floor(currentUser.longest.time / 60)}`
+        const getLongestMinutes = `${longestMinutes % 60}`.slice(-2)
     
   
         return (
@@ -43,7 +43,7 @@ export default function MeditationLog({currentUser, meditations}) {
                         <p>Total time this week</p>
                     </div>
                     <div className="longest">
-                        {/* <span>{longestMinutes} min</span> */}
+                        <span>{longestMinutes} min</span>
                         <p>Longest meditation</p>
                     </div>
             
