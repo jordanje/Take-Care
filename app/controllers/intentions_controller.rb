@@ -1,7 +1,8 @@
 class IntentionsController < ApplicationController
 
   def index
-    intentions = Intention.all 
+    user = User.find(session[:user_id])
+    intentions = user.intentions
     render json: intentions
   end
 

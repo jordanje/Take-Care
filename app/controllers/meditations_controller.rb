@@ -4,8 +4,8 @@ class MeditationsController < ApplicationController
 
     def index
         user = User.find(session[:user_id])
-        meditations = user.meditations.sort_by_date
-        render json: meditations, status: :ok
+        userMeditations = user.meditations.sort_by_date
+        render json: userMeditations, status: :ok
     end
 
     def show

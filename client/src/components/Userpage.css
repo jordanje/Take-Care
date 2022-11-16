@@ -98,8 +98,9 @@
     }   */
 
     .background-intentions {
-        height: 100%;
-        margin-top: 100px;
+        height: 70%;
+        margin-top: 200px;
+        background-position: center bottom;
     }
 
   }

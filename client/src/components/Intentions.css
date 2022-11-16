@@ -3,8 +3,8 @@
     font-family: 'Nunito', sans-serif;
     max-width: 600px;
     /* height: 600px; */
-    padding: 10px 10px; 
-    /* background-color: #f8f4e5; */
+    padding: 20px 10px; 
+   background-color: white;
     text-align: center;
     align-content: center;
     /* border: 2px solid black; */
@@ -32,30 +32,16 @@
 }
 
 
-.clouds-img {
-    display: flex;
-    width: 370px;
-    position: absolute;
-    z-index: 1;
-    top: 65px;
-}
-
-.clouds-div{
-    top: 60px;
-    display: flex;
-    width: 100%;
-    flex-direction: column-reverse;
-}
 
 .intentions-form textarea {
-    width: 80%;
-    height: 70px;
+    width: 70%;
+    height: 50px;
     padding: 20px;
     resize: none;
     margin: 20px;
     border: 1.5px solid #b2afaf;
-    border-radius: 15px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 14px;
 }
 
 .intentions-form label {
@@ -159,11 +145,9 @@
 @media screen and (max-width: 700px) {
     .intentions-form {
         width: 100%;
+        margin-top: 30px;
         padding: 0px;
     }
 
-    .clouds-img {
-        top: 50px;
-        width: 280px;
-    }
+
 }

@@ -4,7 +4,7 @@ import MeditationReflection from "./MeditationReflection"
 import "./MeditationPage.css"
 import AudioController from "./AudioController";
 
-export default function MeditationPage({currentUser, selectedTheme, updateMeditations}){
+export default function MeditationPage({currentUser, selectedTheme, updateDuration, updateMeditations}){
     const [ meditationEnd, setMeditationEnd ] = useState(false)
     const [ newMeditation, setNewMeditation ] = useState({})
 
@@ -72,6 +72,10 @@ export default function MeditationPage({currentUser, selectedTheme, updateMedita
           console.log(data)
           onShowReflection(data)
           updateMeditations(data)
+
+        const totalMinutes = `${Math.floor(data.length / 60)}`
+        const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
+          updateDuration(getTotalMinutes)
         })
       }
 
@@ -81,7 +85,6 @@ export default function MeditationPage({currentUser, selectedTheme, updateMedita
         setNewMeditation(meditation)
     }
 
-    console.log(selectedTheme)
 
     return (
         <div >
@@ -94,7 +97,7 @@ export default function MeditationPage({currentUser, selectedTheme, updateMedita
                     <img src={selectedTheme.background} alt={selectedTheme.name}/>
                 </div>
                 <div className="audio">
-                    <AudioController audio={selectedTheme.audio} playing={playing}/>
+                    {selectedTheme.audio&&<AudioController audio={selectedTheme.audio} playing={playing}/>}
                 </div>
                 <div className="stop-watch-div">
                     <StopWatch wait={3000} currentUser={currentUser} isActive={isActive} isPaused={isPaused} time={time} handleEnd={handleEnd} handlePauseResume={handlePauseResume} handleReset={handleReset} handleStart={handleStart}/>     

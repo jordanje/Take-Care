@@ -30,6 +30,7 @@
 
 .duration {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     padding: 20px;
 }
@@ -39,11 +40,22 @@
     font-size: 18px;
 }
 
+.meditation-type {
+    border: 1px solid gray;
+    padding: 2px;
+    border: 0.0625rem solid rgb(229, 229, 229);
+    border-radius: 0.25rem;
+    padding: calc((1.125rem - 1.25em) / 2) 0.5rem;
+    /* font-size: 12px; */
+    font-size: 12px;
+    font-weight: 700;
+}
+
 .meditation-reflection-item {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    max-width: 500px;
+    max-width: 520px;
 }
 
 .questions {
@@ -58,7 +70,7 @@
 }
 
 .circle-image {
-    width: 260px;
+    width: 360px;
     border-radius: 20px;
 }
 
@@ -69,8 +81,7 @@
 .item-header{
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
-    max-width: 500px;
+    padding: 20px;
 }
 
 .date-duration {

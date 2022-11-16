@@ -6,7 +6,7 @@ import './Userpage.css'
 import { useState } from "react";
 import PageToggler from "./PageToggler";
 
-export default function UserPage ({currentUser, meditations}) {
+export default function UserPage ({currentUser, meditations, duration}) {
     const [switchPage, setSwitchPage] = useState(false);
     
     
@@ -30,7 +30,7 @@ export default function UserPage ({currentUser, meditations}) {
                 <MeditationButton />
             </div>
             <div className="meditation-section">
-                <MeditationLog currentUser={currentUser} meditations={meditations}/>
+                <MeditationLog duration={duration} currentUser={currentUser} meditations={meditations}/>
             </div>
           
             </div>

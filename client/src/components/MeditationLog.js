@@ -5,7 +5,7 @@ import './MeditationLog.css'
 import MeditationButton from "./MeditationButton";
 import { useNavigate } from "react-router-dom";
 
-export default function MeditationLog({currentUser, meditations}) {
+export default function MeditationLog({currentUser, meditations, duration}) {
     // const [ viewReflection, setViewReflection ] = useState(false)
     // const handleViewReflection = () => setViewReflection(true)
     let navigate = useNavigate();
@@ -14,16 +14,14 @@ export default function MeditationLog({currentUser, meditations}) {
         navigate(`/meditation/${id}`)
     }
 
-    if(currentUser){
-        const totalMinutes = `${Math.floor(currentUser.total_time_this_week / 60)}`
-        const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
+
 
 
         const totalLastMinutes = `${Math.floor(currentUser.total_time_last_week / 60)}`
         const getTotalLastMinutes = `${totalLastMinutes % 60}`.slice(-2)
 
-        const longestMinutes = `${Math.floor(currentUser.longest.length / 60)}`
-        const getLongestMinutes = `${longestMinutes % 60}`.slice(-2)
+        // const longestMinutes = `${Math.floor(currentUser.longest.length / 60)}`
+        // const getLongestMinutes = `${longestMinutes % 60}`.slice(-2)
     
   
         return (
@@ -31,13 +29,13 @@ export default function MeditationLog({currentUser, meditations}) {
                 <div className="stats">
                   
                     <div className="this-week">
-                        <span>{getTotalMinutes} min</span>
+                        <span>{duration} min</span>
                         <p>Total time this week</p>
                     </div>
-                    <div className="longest">
+                    {/* <div className="longest">
                         <span>{longestMinutes} min</span>
                         <p>Longest meditation</p>
-                    </div>
+                    </div> */}
             
                 </div>
           
@@ -63,6 +61,6 @@ export default function MeditationLog({currentUser, meditations}) {
                 </div>
             </div>
         )
-                }
+                
 } 
 

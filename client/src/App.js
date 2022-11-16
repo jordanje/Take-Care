@@ -33,6 +33,16 @@ function App() {
   const [ selectedTheme, setSelectedTheme ] = useState(false);
   const navigate = useNavigate();
   const [ meditations, setMeditations ] = useState([])
+  const [ duration, setDuration] = useState(0)
+
+
+  const updateUser = (user) => setCurrentUser(user)
+  const updateTheme = (theme) => {
+    setSelectedTheme(theme)
+    navigate('/meditation')
+  }
+  const updateMeditations = (newMeditation) => setMeditations([newMeditation,...meditations])
+  const updateDuration = (newTime) => setDuration(parseInt(newTime) + parseInt(duration))
 
   useEffect(() => {
     fetch('/authorized_user')
@@ -40,6 +50,10 @@ function App() {
       if(res.ok){
         res.json().then(user => {
           updateUser(user)
+
+          const totalMinutes = `${Math.floor(user.total_time_this_week / 60)}`
+          const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
+          setDuration(totalMinutes)
         })
       }
     })
@@ -61,13 +75,6 @@ function App() {
   
   }, [setMeditations]);
 
-  const updateUser = (user) => setCurrentUser(user)
-  const updateTheme = (theme) => {
-    setSelectedTheme(theme)
-    navigate('/meditation')
-  }
-  const updateMeditations = (newMeditation) => setMeditations([...meditations, newMeditation])
-
 
   return (
     <div>
@@ -75,10 +82,10 @@ function App() {
         <Routes>
             <Route path="/" element={<Home updateUser={updateUser} />} />
             {/* <Route path="/login" element={<Login updateUser={updateUser}/>} /> */}
-            <Route path="/userpage" element={<UserPage currentUser={currentUser} meditations={meditations}/>} />
+            <Route path="/userpage" element={<UserPage duration={duration} currentUser={currentUser} meditations={meditations}/>} />
             <Route path="/daily-intention" element={<Intentions currentUser={currentUser}/>}/>
             <Route path="/themes" element={<ThemePage currentUser={currentUser} themes={themes} updateTheme={updateTheme}/>} />
-            <Route path="/meditation" element={<MeditationPage currentUser={currentUser} selectedTheme={selectedTheme} updateMeditations={updateMeditations}/>} />
+            <Route path="/meditation" element={<MeditationPage updateDuration={updateDuration} duration={duration} currentUser={currentUser} selectedTheme={selectedTheme} updateMeditations={updateMeditations}/>} />
             <Route path='/meditation/:id' element={<MeditationItemPage />} />
             <Route path='/login-photo' element={loginPhoto} />
         </Routes>
