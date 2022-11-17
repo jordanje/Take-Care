@@ -82,6 +82,7 @@ export default function MeditationPage({currentUser, selectedTheme, updateDurati
             body: JSON.stringify(meditation_data)
         }).then((res) => res.json())
         .then((data) => {
+          console.log(data)
           onShowReflection(data)
           updateMeditations(data)
           const totalMinutes = `${Math.floor(data.length / 60)}`

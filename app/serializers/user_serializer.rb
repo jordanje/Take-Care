@@ -12,7 +12,9 @@ class UserSerializer < ActiveModel::Serializer
 
     sum = 0
     rec.each do |m|
-      sum += m.length
+      if m.length != nil
+        sum += m.length
+      end
     end
     return sum
   end
