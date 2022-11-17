@@ -25,7 +25,7 @@ export default function Intentions({currentUser}) {
         })
     }, [])
 
-    console.log(intentions)
+
     let index = intentions.length - counter
         // for(let i = 0; i < ind; i++){
             //     console.log(i, index)

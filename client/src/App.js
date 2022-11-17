@@ -41,7 +41,10 @@ function App() {
     setSelectedTheme(theme)
     navigate('/meditation')
   }
-  const updateMeditations = (newMeditation) => setMeditations([newMeditation,...meditations])
+  const updateMeditations = (newMeditation) => {
+    const slicedMed = meditations.slice(0,4)
+    setMeditations([newMeditation,...slicedMed])
+  }
   const updateDuration = (newTime) => setDuration(parseInt(newTime) + parseInt(duration))
 
   useEffect(() => {
@@ -55,7 +58,6 @@ function App() {
           const totalMinutes = `${Math.floor(user.total_time_this_week / 60)}`
           const getTotalMinutes = `${totalMinutes % 60}`.slice(-2)
           setDuration(totalMinutes)
-          setMeditations(user.meditations)
         })
       }
     })

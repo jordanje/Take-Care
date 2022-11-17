@@ -7,7 +7,6 @@ export default function DailyTip(){
     const tips = (mindfulnessTips) => {
         const randomIndex = Math.floor(Math.random() * mindfulnessTips.length)
         const item = mindfulnessTips[randomIndex]
-        console.log(item)
         return item
     }
 

@@ -3,6 +3,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    z-index: 6;
 }
 
 .stop-watch-container .timer{
