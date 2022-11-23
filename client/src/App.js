@@ -18,12 +18,13 @@ import OceanWaves from './OceanWaves.mp3'
 import Stream from './Stream.mp3'
 import Thunderstorm from './Thunderstorm.mp3'
 import Rainforest from './Rainforest.mp3'
+import nightsky from "./nightsky.aac";
 import loginPhoto from './loginphoto.svg'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(false);
   const [ themes, setThemes ] = useState([
-    {id: 1, name: 'Night Sky', background: 'https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', audio: NightSky}, 
+    {id: 1, name: 'Night Sky', background: 'https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', audio: nightsky}, 
     {id: 2, name: "Ocean Waves", background: 'https://images.pexels.com/photos/355328/pexels-photo-355328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', audio: OceanWaves}, 
     {id: 3, name: 'Rainforest', background: 'https://images.pexels.com/photos/927414/pexels-photo-927414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', audio:Rainforest}, 
     {id: 4, name: 'Fireplace', background: 'https://images.pexels.com/photos/1724228/pexels-photo-1724228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', audio: FirePlace}, 
