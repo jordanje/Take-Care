@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Green Room
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</br>
+Flatiron Capstone Project
+</br>
+</br>
+![](./src/readmefiles/homepage.png)
 
-## Available Scripts
+## Overview
+Take Care in a minfulness app for meditations and daily intentions. 
+</br>
+</br>
+![this is a gif](./src/readmefiles/ezgif.com-gif-maker.mov)
 
-In the project directory, you can run:
+## What It Does
+After a user logs in they can choose to meditate or create a daily intention entry. Within their daily intentions page they look back on previous intentions or create a new one for the day.
+Users also have the option to meditate. Within a meditation, there a number of soundscapes to choose from before starting a 20 second guided breathing exorcise. After the meditation is completed, the user will be taken to a meditation reflection page. Recent meditation activity can be viewed from the homepage.
+</br>
+</br>
 
-### `npm start`
+![this is an image](./src/ezgif.com-gif-maker.gif)
+</br>
+</br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How It Functions
+The main functionality is built using fetch requests to our backend server to handle all CRUD capabilities. The three tables being interacted with by the frontend are Rooms, Plants, and Added_Plants. These three tables represent a many-to-many relationship in our database. The database and routes are being handle by Active Records, Rake, and Sinatra. 
+</br>
+</br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Run the Project
+The app requires you to install dependencies and run a local server. Read directions on how to get the backend started at: https://github.com/jordanje/green-room-backend. Fork and download both repositories to your computer to get the site fully functioning.
 
-### `npm test`
+```
+$ npm install 
+$ npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</br>

@@ -12,7 +12,6 @@ import ThemePage from "./components/ThemePage";
 import MeditationPage from "./components/MeditationPage";
 import Intentions from "./components/Intentions";
 import MeditationItemPage from "./components/MeditationItemPage";
-import NightSky from './NightSky.mp3'
 import FirePlace from './Fireplace.mp3'
 import OceanWaves from './OceanWaves.mp3'
 import Stream from './Stream.mp3'

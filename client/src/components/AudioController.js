@@ -1,5 +1,5 @@
 import ReactHowler from 'react-howler'
-import NightSky from '../NightSky.mp3'
+
 import { useState } from 'react'
 
 export default function AudioController({audio, playing}){
