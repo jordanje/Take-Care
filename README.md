@@ -1,10 +1,10 @@
-# Green Room
-
+# Take Care
 Flatiron Capstone Project
 
 </br>
 
 ## Overview
+
 Take Care in a minfulness app for meditations and daily intentions!
 </br>
 </br>
@@ -31,8 +31,14 @@ The API is built using Ruby on Rails. The database is using Postgres so store an
 </br>
 
 ## Deployed Project
-This project is deployed using Render. To checkout this live version go to: https://take-care.onrender.com/
+This project is deployed using Render. 
+</br>
+To checkout this live version go to: https://take-care.onrender.com/
+</br>
 Feel free to use email: test@gmail.com, password: 12341234
+
+</br>
+
 Hope you enjoy!
 
 
