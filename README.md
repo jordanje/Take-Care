@@ -3,6 +3,15 @@ Flatiron Capstone Project
 
 </br>
 
+## Deployed Project
+This project is deployed using Render. 
+</br>
+To checkout this live version go to: https://take-care.onrender.com/
+</br>
+Feel free to use email: test@gmail.com, password: 12341234
+
+</br>
+
 ## Overview
 
 Take Care in a minfulness app for meditations and daily intentions!
@@ -30,14 +39,7 @@ The API is built using Ruby on Rails. The database is using Postgres so store an
 ![this is an image](./intentions.png)
 </br>
 
-## Deployed Project
-This project is deployed using Render. 
-</br>
-To checkout this live version go to: https://take-care.onrender.com/
-</br>
-Feel free to use email: test@gmail.com, password: 12341234
 
-</br>
 
 Hope you enjoy!
 
