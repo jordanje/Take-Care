@@ -4,12 +4,9 @@ Flatiron Capstone Project
 </br>
 
 ## Deployed Project
-This project is deployed using Render. 
-</br>
-To checkout this live version go to: https://take-care.onrender.com/
-</br>
-Feel free to use email: test@gmail.com, password: 12341234
+This project was deployed using Render, but it is experiencing some issues. I'm hoping to get it back up and running soon. I apologize for the inconvience. I have posted a video walk through of the app below.
 
+](https://youtu.be/SlScjzm5n_I)
 </br>
 
 ## Overview
