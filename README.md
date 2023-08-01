@@ -11,7 +11,7 @@ This project was deployed using Render, but it is experiencing some issues. I'm 
 
 ## Overview
 
-Take Care in a minfulness app for meditations and daily intentions!
+Take Care is a minfulness app for meditations and daily intentions!
 </br>
 </br>
 ![this is a gif](./homepage.png)
